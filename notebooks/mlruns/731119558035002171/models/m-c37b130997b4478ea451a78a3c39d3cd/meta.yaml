@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/DELL/Desktop/mlops-project/notebooks/mlruns/731119558035002171/models/m-c37b130997b4478ea451a78a3c39d3cd/artifacts
+creation_timestamp: 1752598291164
+experiment_id: '731119558035002171'
+last_updated_timestamp: 1752598311686
+model_id: m-c37b130997b4478ea451a78a3c39d3cd
+model_type: null
+name: DummyRegressor
+source_run_id: 6852326bd9b9448581f7fc5608e542b2
+status: 2
+status_message: null

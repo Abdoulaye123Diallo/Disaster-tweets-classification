@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/DELL/Desktop/mlops-project/notebooks/mlruns/731119558035002171/ae3c1079bee84ed6b3c6f95cd622e0ee/artifacts
+end_time: 1752621830420
+entry_point_name: ''
+experiment_id: '731119558035002171'
+lifecycle_stage: active
+run_id: ae3c1079bee84ed6b3c6f95cd622e0ee
+run_name: 20250715_230758-house_price-GradientBoostingRegressor
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752621824418
+status: 3
+tags: []
+user_id: DELL

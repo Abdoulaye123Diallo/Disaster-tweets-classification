@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/DELL/Desktop/mlops-project/notebooks/mlruns/731119558035002171/models/m-e3a930cd204e4cd084e5fe1a44ed3fe7/artifacts
+creation_timestamp: 1752530987489
+experiment_id: '731119558035002171'
+last_updated_timestamp: 1752530993236
+model_id: m-e3a930cd204e4cd084e5fe1a44ed3fe7
+model_type: null
+name: GradientBoostingRegressor
+source_run_id: 88de7129405b4bc3a917fed020265bd7
+status: 2
+status_message: null

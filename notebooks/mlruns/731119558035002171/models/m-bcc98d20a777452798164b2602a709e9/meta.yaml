@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/DELL/Desktop/mlops-project/notebooks/mlruns/731119558035002171/models/m-bcc98d20a777452798164b2602a709e9/artifacts
+creation_timestamp: 1752594040347
+experiment_id: '731119558035002171'
+last_updated_timestamp: 1752594052002
+model_id: m-bcc98d20a777452798164b2602a709e9
+model_type: null
+name: RandomForestRegressor
+source_run_id: dce5600d7a4045f69a9bbbe5cd6b068d
+status: 2
+status_message: null
