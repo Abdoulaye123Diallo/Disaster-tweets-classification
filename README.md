@@ -4,6 +4,8 @@ Ce projet vise à développer un modèle de Machine Learning capable de **classe
 -  **Liés à une catastrophe (disaster)**  
 -  **Non liés à une catastrophe (non-disaster)**
 
+
+Membres du groupe : Abdoulaye Diallo, Aissatou Kany Djogope Mbodje, Mouhamad Samba S Traoré
 ---
 
 ## 📁 Structure du projet
@@ -28,4 +30,6 @@ Ce projet vise à développer un modèle de Machine Learning capable de **classe
 │       └── test.csv            # Données de test
 │
 └── README.md                   # Ce fichier
+
+
 
