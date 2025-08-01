@@ -5,6 +5,8 @@ Ce projet vise à développer un modèle de Machine Learning capable de **classe
 -  **Non liés à une catastrophe (non-disaster)**
 
 
+Lien du swagger pour les tests api : https://disaster-tweets-classification.onrender.com/apidocs
+
 #### Membres du groupe : Abdoulaye Diallo, Aissatou Kany Djogope Mbodje, Mouhamad Samba S Traoré
 ---
 
