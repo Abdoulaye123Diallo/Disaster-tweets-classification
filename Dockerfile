@@ -16,4 +16,4 @@ COPY models/ ./models/
 
 EXPOSE 5000
 
-CMD ["python", "src/endpoints/app.py"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "src.endpoints.app:app"]
