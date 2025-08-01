@@ -8,9 +8,10 @@ import re
 import string
 from scipy.sparse import hstack, csr_matrix
 import os
+from flasgger import Swagger
 
 app = Flask(__name__)
-
+swagger = Swagger(app)
 MODEL_TYPE = "custom"  # ou "pipeline"
 
 # Variables globales pour stocker les modeles
@@ -165,7 +166,40 @@ def predict_single_text(text, location=None, keyword=None):
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    """Endpoint pour prediction d'un seul tweet"""
+    """
+    Prédit si un tweet décrit une catastrophe ou non
+    ---
+    tags:
+      - Prédictions
+    parameters:
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          properties:
+            text:
+              type: string
+              example: "Fire in downtown area"
+            location:
+              type: string
+              example: "New York"
+            keyword:
+              type: string
+              example: "fire"
+    responses:
+      200:
+        description: Résultat de la prédiction
+        schema:
+          type: object
+          properties:
+            prediction:
+              type: integer
+            prediction_label:
+              type: string
+            confidence_score:
+              type: number
+    """
     try:
         data = request.get_json()
         
@@ -211,7 +245,37 @@ def predict():
 
 @app.route('/predict_batch', methods=['POST'])
 def predict_batch():
-    """Endpoint pour prédire plusieurs tweets à la fois"""
+    """
+    Prédit plusieurs tweets en une seule requête
+    ---
+    tags:
+      - Prédictions
+    parameters:
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          properties:
+            texts:
+              type: array
+              items:
+                type: string
+              example: ["Fire downtown", "Nice weather"]
+            locations:
+              type: array
+              items:
+                type: string
+              example: ["NY", "LA"]
+            keywords:
+              type: array
+              items:
+                type: string
+              example: ["fire", "weather"]
+    responses:
+      200:
+        description: Résultats des prédictions
+    """
     try:
         data = request.get_json()
         
@@ -256,7 +320,15 @@ def predict_batch():
 
 @app.route('/health', methods=['GET'])
 def health_check():
-    """Endpoint de vérification de santé"""
+    """
+    Vérifie si le modèle est chargé et opérationnel
+    ---
+    tags:
+      - Statut
+    responses:
+      200:
+        description: Statut du modèle
+    """
     model_loaded = False
     
     if MODEL_TYPE == "pipeline":
@@ -272,7 +344,15 @@ def health_check():
 
 @app.route('/info', methods=['GET'])
 def get_info():
-    """Informations sur l'API"""
+    """
+    Informations générales sur l’API
+    ---
+    tags:
+      - Info
+    responses:
+      200:
+        description: Informations sur l’API
+    """
     return jsonify({
         'model_type': MODEL_TYPE,
         'endpoints': {
